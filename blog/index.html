@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Nicolò Molfetta — Analista Aziendale OSM per PMI</title>
+<meta name="description" content="Articoli pratici per imprenditori di PMI italiane: organizzazione, persone, vendite e controllo di gestione. Metodo OSM.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.nicolomolfetta.it/blog/">
+<meta name="theme-color" content="#1a1613">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Blog | Nicolò Molfetta — Analista Aziendale OSM">
+<meta property="og:description" content="Articoli pratici per imprenditori di PMI italiane. Metodo OSM.">
+<meta property="og:url" content="https://www.nicolomolfetta.it/blog/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a1613;--ink-soft:#3a332d;--ink-muted:#6b5f57;
+  --cream:#f6f0e6;--cream-deep:#ede4d3;
+  --amber:#c2541d;--amber-deep:#9d3f12;
+  --serif:'Fraunces',Georgia,serif;--sans:'Hanken Grotesk',sans-serif;
+  --line:rgba(26,22,19,.1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.28;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E")}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(246,240,230,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 24px}
+.logo{font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo em{font-style:normal;color:var(--amber)}
+.nav-link{font-size:14px;font-weight:500;color:var(--ink-muted);text-decoration:none}
+.nav-link:hover{color:var(--amber)}
+
+main{position:relative;z-index:1;padding:72px 0 88px}
+.blog-hd{text-align:center;margin-bottom:56px}
+.blog-ey{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--amber-deep);margin-bottom:20px}
+.blog-ey::before,.blog-ey::after{content:"";width:26px;height:1px;background:var(--amber)}
+.blog-hd h1{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5vw,56px);line-height:1.06;letter-spacing:-.03em;max-width:18ch;margin:0 auto 16px}
+.blog-hd p{font-size:17px;color:var(--ink-soft);max-width:46ch;margin:0 auto;line-height:1.6}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px}
+.card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px 26px;transition:.3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 44px -18px rgba(26,22,19,.25);border-color:rgba(194,84,29,.3)}
+.card-date{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);margin-bottom:12px;display:block}
+.card h2{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.22;letter-spacing:-.015em;margin-bottom:10px}
+.card p{font-size:14.5px;color:var(--ink-muted);line-height:1.6}
+.card-more{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;font-weight:600;color:var(--amber)}
+
+.empty{text-align:center;color:var(--ink-muted);font-size:15px;padding:40px 0}
+
+footer{position:relative;z-index:1;background:var(--ink);color:rgba(246,240,230,.5);padding:30px 0;margin-top:40px}
+.foot{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;font-size:13px}
+.foot-logo{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--cream)}
+footer a{color:rgba(246,240,230,.5);text-decoration:none}
+footer a:hover{color:var(--amber)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Nicolò Molfetta<em>.</em></a>
+    <a href="/" class="nav-link">← Torna al sito</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="blog-hd">
+      <span class="blog-ey">Il Blog</span>
+      <h1>Idee concrete per chi fa impresa</h1>
+      <p>Organizzazione, persone, vendite e numeri. Niente teoria: solo quello che funziona davvero in una PMI.</p>
+    </div>
+    <div class="grid" id="lista">
+      <p class="empty">Caricamento articoli…</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-logo">Nicolò Molfetta<em style="color:var(--amber);font-style:normal">.</em></div>
+    <div>Analista Aziendale OSM · Varese · <a href="/privacy.html">Privacy Policy</a> · <a href="/note-legali.html">Note Legali</a></div>
+    <div>© <span id="yr"></span> · P.IVA 03925510129</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+fetch('articles.json?v=' + Date.now())
+  .then(r => r.json())
+  .then(articoli => {
+    const lista = document.getElementById('lista');
+    if (!articoli.length) { lista.innerHTML = '<p class="empty">Presto i primi articoli.</p>'; return; }
+    articoli.sort((a,b) => new Date(b.data) - new Date(a.data));
+    lista.innerHTML = articoli.map(a => `
+      <a class="card" href="${a.slug}.html">
+        <span class="card-date">${new Date(a.data).toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric'})}</span>
+        <h2>${a.titolo}</h2>
+        <p>${a.estratto}</p>
+        <span class="card-more">Leggi l'articolo →</span>
+      </a>`).join('');
+  })
+  .catch(() => { document.getElementById('lista').innerHTML = '<p class="empty">Presto i primi articoli.</p>'; });
+</script>
+</body>
+</html>
