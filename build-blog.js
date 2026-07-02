@@ -20,6 +20,8 @@ function decode(s) {
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&nbsp;/g, ' ')
+    .trim()
+    .replace(/^["']+|["']+$/g, '')   // toglie virgolette residue (bug formule Make)
     .trim();
 }
 
@@ -28,9 +30,9 @@ function decode(s) {
 // content="...l'azienda..." non rompono il match
 function meta(html, attr, key) {
   const k = ESC(key);
-  let m = html.match(new RegExp('<meta[^>]*\\b' + attr + '=(["\\\'])' + k + '\\1[^>]*\\bcontent=(["\\\'])([\\s\\S]*?)\\2', 'i'));
+  let m = html.match(new RegExp('<meta[^>]*\\b' + attr + '=(["\\\']{1,2})' + k + '\\1[^>]*\\bcontent=(["\\\']{1,2})([\\s\\S]*?)\\2', 'i'));
   if (m) return decode(m[3]);
-  m = html.match(new RegExp('<meta[^>]*\\bcontent=(["\\\'])([\\s\\S]*?)\\1[^>]*\\b' + attr + '=(["\\\'])' + k + '\\3', 'i'));
+  m = html.match(new RegExp('<meta[^>]*\\bcontent=(["\\\']{1,2})([\\s\\S]*?)\\1[^>]*\\b' + attr + '=(["\\\']{1,2})' + k + '\\3', 'i'));
   return m ? decode(m[2]) : '';
 }
 
