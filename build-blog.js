@@ -80,5 +80,20 @@ for (const f of files) {
 articoli.sort((a, b) => new Date(b.data) - new Date(a.data));
 fs.writeFileSync(OUT, JSON.stringify(articoli, null, 2), 'utf8');
 
+// ---- SITEMAP ----
+const SITE = 'https://www.nicolomolfetta.it';
+const oggi = new Date().toISOString().slice(0, 10);
+const urls = [
+  { loc: SITE + '/', lastmod: oggi, priority: '1.0' },
+  { loc: SITE + '/blog/', lastmod: articoli[0] ? articoli[0].data : oggi, priority: '0.8' },
+  ...articoli.map(a => ({ loc: SITE + '/blog/' + a.slug + '.html', lastmod: a.data, priority: '0.7' }))
+];
+const xml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+  urls.map(u => '  <url><loc>' + u.loc + '</loc><lastmod>' + u.lastmod + '</lastmod><priority>' + u.priority + '</priority></url>').join('\n') +
+  '\n</urlset>\n';
+fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), xml, 'utf8');
+console.log('✅ sitemap.xml generata — ' + urls.length + ' URL');
+
 console.log('\n✅ articles.json generato — ' + articoli.length + ' articoli' + (warnings ? ' (' + warnings + ' avvisi)' : ''));
 articoli.forEach(a => console.log('   • ' + a.data + '  ' + a.slug));
